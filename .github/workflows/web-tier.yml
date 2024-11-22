@@ -22,7 +22,7 @@ jobs:
       # Step 3: Install npm dependencies
       - name: Install dependencies
         run: npm install
-        working-directory: .application-code/web-tier
+        working-directory: ./application-code/web-tier
         
      # Step 4: Build the React application
       - name: Build the application
