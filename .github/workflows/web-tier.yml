@@ -49,15 +49,15 @@ jobs:
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-           name: build-artifact
-           paths: 
-                application-code/app-tier/build
-                application-code/web-tier/build
+           name: build-artifact-app
+           paths: application-code/app-tier/build 
+                
 
-      # - name: Upload build artifact
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #      name: build-artifact
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+           name: build-artifact-web
+           path: application-code/web-tier/build
        
       # Step 6: Set up Java 17
       - name: Set up Java
