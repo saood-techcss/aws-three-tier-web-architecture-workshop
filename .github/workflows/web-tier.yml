@@ -35,23 +35,11 @@ jobs:
         run: npm install
         working-directory: ./application-code/app-tier  # Specify the backend directory
 
-      #Step 4: Build the backend application
-      - name: Build the backend application
-        run: npm run build
-        working-directory: ./application-code/app-tier
       # - name: List files in the root directory
       #   run: ls -la
 
       # - name: List files in the build directory
-      #   run: ls -la ./build  # Confirm if the `build` folder exists
-          
-     # Step 5: Upload the build folder as an artifact
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
-        with:
-           name: build-artifact-app
-           path: application-code/app-tier/build 
-                
+      #   run: ls -la ./build  # Confirm if the `build` folder exists      
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
