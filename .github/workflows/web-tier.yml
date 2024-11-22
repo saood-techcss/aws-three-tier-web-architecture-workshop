@@ -18,27 +18,30 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          
       # Step 3: Install npm dependencies
       - name: Install dependencies
         run: npm install
-        working-directory: ./web-tier
-      # Step 4: Build the React application
-      #- name: Build the application
-      #  run: npm run build
-      #  working-directory: ./aws-three-tier-web-architecture-workshop/application-code/web-tier/package.json
+        working-directory: .application-code/web-tier
+        
+     # Step 4: Build the React application
+      - name: Build the application
+        run: npm run build
+        working-directory: ./aws-three-tier-web-architecture-workshop/application-code/web-tier/package.json
           
-      # Step 5: Upload the build folder as an artifact
-      #- name: Upload build artifact
-      #  uses: actions/upload-artifact@v4
-      #  with:
-      #    name: build-artifact
-       #   path: ./build
-       # Step 6: Set up Java 17
-     # - name: Set up Java
-      #  uses: actions/setup-java@v3
-      #  with:
-       #   java-version: '17'
-        #  distribution: 'temurin'  # Specify the Java distribution
+     # Step 5: Upload the build folder as an artifact
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+           name: build-artifact
+           path: ./build
+       
+      # Step 6: Set up Java 17
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+           java-version: '17'
+           distribution: 'temurin'  # Specify the Java distribution
     #    step 7: Run SonarCube scan
     #  - name: SonarQube scan
     #    run: |
