@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - '/application-code/web-tier/*'
 jobs:
   build:
     # Define a matrix strategy to run the job on multiple Node.js versions
