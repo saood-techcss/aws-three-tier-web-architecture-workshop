@@ -36,9 +36,9 @@ jobs:
         working-directory: ./application-code/app-tier  # Specify the backend directory
 
       #Step 4: Build the backend application
-      - name: Build the backend application
-        run: npm run build
-        working-directory: ./application-code/app-tier
+      # - name: Build the backend application
+      #   run: npm run build
+      #   working-directory: ./application-code/app-tier
       # - name: List files in the root directory
       #   run: ls -la
 
