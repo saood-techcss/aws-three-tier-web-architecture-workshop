@@ -23,12 +23,22 @@ jobs:
       - name: Install dependencies
         run: npm install
         working-directory: ./application-code/web-tier
-        
+
      # Step 4: Build the React application
       - name: Build the application
         run: npm run build
         working-directory: ./application-code/web-tier
 
+
+      # Step 7: Install dependencies for Backend
+      - name: Install Backend Dependencies
+        run: npm install
+        working-directory: ./application-code/app-tier  # Specify the backend directory
+
+      #Step 4: Build the backend application
+      - name: Build the backend application
+        run: npm run build
+        working-directory: ./application-code/app-tier
       # - name: List files in the root directory
       #   run: ls -la
 
@@ -41,6 +51,12 @@ jobs:
         with:
            name: build-artifact
            path: application-code/web-tier/build
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+           name: build-artifact
+           path: application-code/app-tier/build
        
       # Step 6: Set up Java 17
       - name: Set up Java
