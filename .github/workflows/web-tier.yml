@@ -39,9 +39,8 @@ jobs:
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-           working-directory: ./application-code/web-tier
            name: build-artifact
-           path: ./build
+           path: application-code/web-tier/build
        
       # Step 6: Set up Java 17
       - name: Set up Java
