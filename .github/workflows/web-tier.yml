@@ -39,6 +39,7 @@ jobs:
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
+           working-directory: ./application-code/web-tier
            name: build-artifact
            path: ./build
        
