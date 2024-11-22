@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+# added path      
     paths:
       - '/application-code/web-tier/*'
 jobs:
