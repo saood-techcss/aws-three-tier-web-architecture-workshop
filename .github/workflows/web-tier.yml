@@ -27,7 +27,7 @@ jobs:
      # Step 4: Build the React application
       - name: Build the application
         run: npm run build
-        working-directory: ./aws-three-tier-web-architecture-workshop/application-code/web-tier/package.json
+        working-directory: ./application-code/web-tier
           
      # Step 5: Upload the build folder as an artifact
       - name: Upload build artifact
