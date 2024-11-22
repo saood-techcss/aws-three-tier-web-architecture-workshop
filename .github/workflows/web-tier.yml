@@ -21,7 +21,7 @@ jobs:
       # Step 3: Install npm dependencies
       - name: Install dependencies
         run: npm install
-        working-directory: ./aws-three-tier-web-architecture-workshop/application-code/web-tier/package.json
+        working-directory: ./web-tier
       # Step 4: Build the React application
       #- name: Build the application
       #  run: npm run build
