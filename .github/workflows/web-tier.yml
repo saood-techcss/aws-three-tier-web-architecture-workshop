@@ -50,7 +50,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
            name: build-artifact-app
-           paths: application-code/app-tier/build 
+           path: application-code/app-tier/build 
                 
 
       - name: Upload build artifact
